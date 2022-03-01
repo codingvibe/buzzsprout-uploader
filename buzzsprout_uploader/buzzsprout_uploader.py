@@ -51,11 +51,6 @@ def call_uploader_with_args():
                       help="API key to use when calling Buzzsprout", required=True)
   parser.add_argument("--podcast-id",
                       help="ID of podcast to upload to", required=True)
-  parser.add_argument("--youtube-category", default="22",
-    help="Numeric video category. " +
-      "See https://developers.google.com/youtube/v3/docs/videoCategories/list")
-  parser.add_argument("--youtube-api-client-secrets-file", help="Path to client secrets json file",
-                      default="youtube-uploader-client-credentials.json", required=False)
 
   args, _ = parser.parse_known_args()
 
