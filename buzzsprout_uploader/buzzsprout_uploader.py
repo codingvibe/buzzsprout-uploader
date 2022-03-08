@@ -84,7 +84,7 @@ def upload_podcast(audio, title, description, tags, publish_at, episode_number, 
     episode_number = episode_number if episode_number is not None else default_ep_num,
     season_number = season_number if season_number is not None else default_season_num,
     explicit = explicit,
-    private = private,
+    private = "true" if private else "false",
     email_user_after_audio_processed = email_after_process
   )
 
